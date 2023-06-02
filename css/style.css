@@ -9,7 +9,7 @@
 .sidebar {
   position: fixed;
   height: 100%;
-  width: 240px;
+  width: 260px;
   background: #11101d;
   padding: 15px;
   z-index: 99;
@@ -107,8 +107,6 @@
 .main {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   z-index: 100;
   background: #e7f2fd;
