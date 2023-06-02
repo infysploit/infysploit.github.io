@@ -107,7 +107,6 @@
 }
 .main {
   position: absolute;
-  display: flex;
   height: 100vh;
   z-index: 100;
   background: #e7f2fd;
