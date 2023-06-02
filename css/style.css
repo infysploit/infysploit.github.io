@@ -104,10 +104,6 @@
   position: fixed;
   color: #fff;
   background: #4070f4;
-  cursor: pointer;
-}
-.navbar #sidebar-close {
-  cursor: pointer;
 }
 .main {
   position: relative;
