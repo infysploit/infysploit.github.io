@@ -105,31 +105,25 @@
     <main class="main">
         <h1>Install and setup config</h1>
         <h1>
-          ```
           sudo apt-get install snmp-mibs-downloader
           sudo download-mibs
 
           # Finally comment the line saying "mibs :" in /etc/snmp/snmp.conf
           sudo vi /etc/snmp/snmp.conf
-          ```
         </h1><h1>Enumerating SNMP</h1>
         <h1>
-          ```
           snmpwalk -v <1/2c/3> -c <publice/private> <IP-ADDRESS> .1 #Enum all
           snmpwalk -v <1/2c/3> -c <publice/private> <IP-ADDRESS> NET-SNMP-EXTEND-MIB::nsExtendObjects #Get extended
           snmpwalk -v <1/2c/3> -c <publice/private> <IP-ADDRESS> NET-SNMP-EXTEND-MIB::nsExtendOutputFull #Get extended full
-          ```
         </h1>
         <h1>Filter result with grep</h1>
         <h1>
-          ```
           grep -i "trap" #Get private string
           grep -i "login\|fail" #Get login
           grep -i "user\|pass" #Get user&pass
           grep -E -o "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}\b" #Get email
           grep -i "hrSWInstalledName" #Get installed program
           grep -i "NET-SNMP-EXTEND-MIB" #Get extended
-          ```
         </h1>
     </main>
 

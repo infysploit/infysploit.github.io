@@ -90,6 +90,7 @@
 }
 .navbar,
 .main {
+  top: 0;
   left: 260px;
   width: calc(100% - 260px);
   transition: all 0.5s ease;
@@ -105,7 +106,7 @@
   color: #fff;
 }
 .main {
-  position: relative;
+  position: absolute;
   display: flex;
   height: 100vh;
   z-index: 100;
@@ -114,4 +115,5 @@
 .main h1 {
   color: #11101d;
   font-size: 16px;
+  text-align: left;
 }
