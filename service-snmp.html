@@ -1,25 +1,139 @@
-Install and setup config
-```
-sudo apt-get install snmp-mibs-downloader
-sudo download-mibs
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INFYSPLOIT</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  </head>
+  <body>
+    <nav class="sidebar">
+      <a href="#" class="logo">INFYSPLOIT</a>
 
-# Finally comment the line saying "mibs :" in /etc/snmp/snmp.conf
-sudo vi /etc/snmp/snmp.conf
-```
+      <div class="menu-content">
+        <ul class="menu-items">
 
-Enumerating SNMP
-```
-snmpwalk -v <1/2c/3> -c <publice/private> <IP-ADDRESS> .1 #Enum all
-snmpwalk -v <1/2c/3> -c <publice/private> <IP-ADDRESS> NET-SNMP-EXTEND-MIB::nsExtendObjects #Get extended
-snmpwalk -v <1/2c/3> -c <publice/private> <IP-ADDRESS> NET-SNMP-EXTEND-MIB::nsExtendOutputFull #Get extended full
-```
+          <li class="item">
+            <div class="submenu-item">
+              <span>Well-knows Ports</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
 
-Filter result with grep
-```
-grep -i "trap" #Get private string
-grep -i "login\|fail" #Get login
-grep -i "user\|pass" #Get user&pass
-grep -E -o "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}\b" #Get email
-grep -i "hrSWInstalledName" #Get installed program
-grep -i "NET-SNMP-EXTEND-MIB" #Get extended
-```
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Well-knows Ports
+              </div>
+              <li class="item">
+                <a href="/service-snmp.html">161,162/UDP - Service SNMP</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="item">
+            <div class="submenu-item">
+              <span>Active Directory</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Active Directory
+              </div>
+              <li class="item">
+                <a href="#">Information</a>
+              </li>
+              <li class="item">
+                <a href="#">Information</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="item">
+            <div class="submenu-item">
+              <span>Privilege Escalation</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Privilege Escalation
+              </div>
+              <li class="item">
+                <a href="#">Information</a>
+              </li>
+              <li class="item">
+                <a href="#">Information</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="item">
+            <div class="submenu-item">
+              <span>Lateral Movement</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Lateral Movement
+              </div>
+              <li class="item">
+                <a href="#">Information</a>
+              </li>
+              <li class="item">
+                <a href="#">Information</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="navbar">
+      <i id="sidebar-close"></i>
+    </nav>
+    
+    <main class="main">
+        <h1>Install and setup config</h1>
+        <h1>
+          ```
+          sudo apt-get install snmp-mibs-downloader
+          sudo download-mibs
+
+          # Finally comment the line saying "mibs :" in /etc/snmp/snmp.conf
+          sudo vi /etc/snmp/snmp.conf
+          ```
+        </h1><h1>Enumerating SNMP</h1>
+        <h1>
+          ```
+          snmpwalk -v <1/2c/3> -c <publice/private> <IP-ADDRESS> .1 #Enum all
+          snmpwalk -v <1/2c/3> -c <publice/private> <IP-ADDRESS> NET-SNMP-EXTEND-MIB::nsExtendObjects #Get extended
+          snmpwalk -v <1/2c/3> -c <publice/private> <IP-ADDRESS> NET-SNMP-EXTEND-MIB::nsExtendOutputFull #Get extended full
+          ```
+        </h1>
+        <h1>Filter result with grep</h1>
+        <h1>
+          ```
+          grep -i "trap" #Get private string
+          grep -i "login\|fail" #Get login
+          grep -i "user\|pass" #Get user&pass
+          grep -E -o "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}\b" #Get email
+          grep -i "hrSWInstalledName" #Get installed program
+          grep -i "NET-SNMP-EXTEND-MIB" #Get extended
+          ```
+        </h1>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
